@@ -25,6 +25,10 @@ a {
   background-image: url("images/dark-code.jpg");
 }
 
+.blade {
+  background-image: url("images/blade.png");
+}
+
 @keyframes slide-down {
   from {
     opacity: 0;
@@ -60,6 +64,58 @@ a {
   }
 }
 
+@keyframes content-in {
+  from {
+    opacity: 0%; 
+    margin-left: 0%;
+  }
+  to {
+    opacity: 100%; 
+    margin-left: 5%; 
+  }
+}
+
+#content {
+  margin-left: 5%; 
+  margin-top: 10%; 
+  position: absolute; 
+  top: 0;
+  left: 0; 
+}
+
+#title {
+  font-size: 7vw; 
+  background-color: black; 
+  color: white; 
+  display: inline-block;
+  width: 20%;  
+  margin: 0; 
+}
+
+#description {
+  font-size: 1vw; 
+  color: black; 
+  background-color: white; 
+  display: inline-block;
+  width: 30%;
+  padding: 10px; 
+}
+
+.visible {
+  visibility: visible; 
+  animation-duration: 0.5s;
+  animation-name: content-in; 
+}
+
+.hidden {
+  visibility: hidden; 
+}
+
+.welcome-shown {  
+  animation-duration: 1s; 
+  animation-name: slide-right; 
+}
+
 h1 {
   font-size: 13vw;
   margin-top: 23%; 
@@ -69,12 +125,14 @@ h1 {
   background-color: black;
   padding: 10px 0px 10px 10px; 
   color: white; 
-  animation-duration: 1s; 
-  animation-name: slide-right; 
 }
 
 #nav-content {
   margin-left: 5%; 
+}
+
+.nav-menu {
+  margin-left: 10px; 
 }
 
 #nav-label {
@@ -84,7 +142,7 @@ h1 {
 }
 
 #vertical-line {
-  margin-left: 10px;
+  margin-left: 20px;
   border-left: medium solid white; 
   padding-right: 10px;
 }
