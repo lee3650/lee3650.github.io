@@ -7,13 +7,10 @@ body {
   background-color: black; 
 }
 
-@keyframes fade {
-  from {
-    color: black;
-  }
-  to {
-    color: white; 
-  }
+a {
+  color: white; 
+  text-decoration: none; 
+  font-size: 1vw; 
 }
 
 .light {
@@ -22,8 +19,10 @@ body {
 
 .dark {
   background-image: url("images/dark-computer.jpg");
-  animation-name: fade; 
-  animation-duration: 0.25s; 
+}
+
+.code {
+  background-image: url("images/dark-code.jpg");
 }
 
 @keyframes slide-down {
