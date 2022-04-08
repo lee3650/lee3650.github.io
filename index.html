@@ -6,7 +6,11 @@
     <title>lee3650</title>
   </head>
 	<body id="body" class="code">
-    <div id="nav-bar">
+    <span id="content-bg" class="hidden">
+      <div id="content-background-left"></div>
+      <div id="content-background-right"></div>
+    </span>
+    <div id="nav-bar" class="transparent">
       <div id="nav-content">
         <button id="nav-label" class="nav-menu" onclick="showWelcome()">lee3650</span>
         <span id="vertical-line" class="nav-menu"></span>
@@ -20,107 +24,106 @@
     </div>
 		<h1 id="welcome-text" class="welcome-shown">Welcome</h1>
     <div id="about" class="content hidden">
-      <h2 class="title">About</h2>
-      <br>
-      <p class="description">Welcome to my website! I'm Isaac Lee, a student at Purdue University, West Lafayette studying Computer Science. I plan to gradudate in December, 2023.<br><br>
-      I'm pursuing three tracks: Machine Intelligence, Security, and Computer Graphics, as well as minors in English and Math. <br><br>
-      This website is hosted using GitHub Pages. You can press "Source" above to look at the source for this website, or click "GitHub" to be taken to my github. 
-      Click the "Projects" tab for information on some of my completed projects.
-      <br><br>
-      All background images are CC0 and were sourced at pexels.com.
-      </p>
-    </div>
-    <div id="project-intro" class="content hidden">
-      <h2 class="title">Projects</h2>
-      <br>
-      <div class="description"
+        <h2 class="title">About</h2>
+        <br>
+        <p class="description">Welcome to my website! I'm Isaac Lee, a student at Purdue University, West Lafayette studying Computer Science. I plan to gradudate in December, 2023.<br><br>
+        I'm pursuing three tracks: Machine Intelligence, Security, and Computer Graphics, as well as minors in English and Math. <br><br>
+        This website is hosted using GitHub Pages. You can press "Source" above to look at the source for this website, or click "GitHub" to be taken to my github. 
+        Click the "Projects" tab for information on some of my completed projects.
+        <br><br>
+        All background images are CC0 and were sourced at pexels.com.
+        </p>
+      </div>
+      <div id="project-intro" class="content hidden">
+        <h2 class="title">Projects</h2>
+        <br>
+        <div class="description"
+          <p>
+          Here's a few of my completed (personal) programming projects. I started programming in 6th grade as part of FIRST Lego Robotics, and I released my first piece of software around 2016.
+          <br><br> Click an option in the list to get more information about it. 
+          </p>
+          <ul>
+            <li><button class="invert-color content-button" onclick="specificProject(this)">Archipelago</button></li><br>
+            <li><button class="invert-color content-button" onclick="specificProject(this)">Habidoro</button></li><br>
+            <li><button class="invert-color content-button" onclick="specificProject(this)">Scheduler</button></li><br>
+            <li><button class="invert-color content-button" onclick="specificProject(this)">Miscellaneous</button></li><br>
+          </ul>
+        </div>
+      </div>
+      <div id="Miscellaneous" class="content hidden">
+        <h2 class="title">Miscellaneous</h2>
+        <br>
+        <br>
+        <div class="description">
+          <ul>
+            <li>
+              <p>
+                Cyberscape is the working title of my current gamedev project. It's an action roguelike inspired by Rogue Fable III and Nova Drift. I'm not at the point of 
+                having a playable demo, but you can view the in-progress source <a href="https://github.com/lee3650/ActionRoguelike" class="dark-link"><u>here</u></a>. 
+              </p>
+            </li>     
+            <li>
+              <p>
+                Twin Stick Privateer is a web game I released on newgrounds a few years ago. It's a twin-stick shooter based on Asteroids. 
+                You can play it on <a href="https://www.newgrounds.com/portal/view/697635" class="dark-link"><u>newgrounds</u></a> for free. 
+              </p>
+            </li> 
+            <li>
+              <p>
+                This website was developed in order to learn HTML/JavaScript. You can view the source code by clicking "View Source" in the navigation bar above. 
+              </p>
+            </li>
+          </ul>
+          <button onclick="projectsClicked()" class="content-button">Back</button>
+        </div>
+      </div>
+      <div id="Habidoro" class="content hidden">
+        <h2 class="title">Habidoro</h2>
+        <br>
+        <br>
+        <div class="description">
+          <p>
+            Habidoro is a productivity application that allows users to designate the total amount of time they want to work, splits that time into "pomodoros" and 
+            breaks of specified lengths, then tracks statistics and graphs of the users productive time. It was developed using Windows Presentation Foundation (WPF). 
+          </p>
+          <ul>
+            <li><a href="https://hopa.itch.io/habidoro" class="dark-link"><u>Itch.io Download</u></a></li><br>       
+          </ul>
+          <button onclick="projectsClicked()" class="content-button">Back</button>
+        </div>
+      </div>
+      <div id="Scheduler" class="content hidden">
+        <h2 class="title">Scheduler</h2>
+        <br>
+        <br>
+        <div class="description">
+          <p>
+            Scheduler is a productivity application that allows users to create personalized, reusable schedules. It was developed using Windows Presentation Foundation (WPF) and released on itch.io.
+            I made this way back in 2016, before I knew how to use git, so unfortunately the source code is not available. 
+          </p>
+          <ul>
+            <li><a href="https://hopa.itch.io/scheduler" class="dark-link"><u>Itch.io Download</u></a></li><br>       
+          </ul>
+          <button onclick="projectsClicked()" class="content-button">Back</button>
+        </div>
+      </div>
+      <div id="Archipelago" class="content hidden">
+        <h2 class="title">Archipelago</h2>
+        <br>
+        <div class="description">
         <p>
-        Here's a few of my completed (personal) programming projects. I started programming in 6th grade as part of FIRST Lego Robotics, and I released my first piece of software around 2016.
-        <br><br> Click an option in the list to get more information about it. 
+        Archipelago is a roguelite tower defense game I released in January 2022 on Steam. It was developed using Unity and C#. <br><br>It ended up being a fairly large project, especially for a solo developer.
+        I'm happy how I was able to maintain the speed of development throughout the whole project by writing decoupled, modular code. I was able to define all the "charms" - which are gameplay modifiers the 
+        player can find during the game - almost entirely within data, which allowed for rapid iteration. 
         </p>
         <ul>
-          <li><button class="invert-color content-button" onclick="specificProject(this)">Archipelago</button></li><br>
-          <li><button class="invert-color content-button" onclick="specificProject(this)">Habidoro</button></li><br>
-          <li><button class="invert-color content-button" onclick="specificProject(this)">Scheduler</button></li><br>
-          <li><button class="invert-color content-button" onclick="specificProject(this)">Miscellaneous</button></li><br>
-        </ul>
-      </div>
-    </div>
-    <div id="Miscellaneous" class="content hidden">
-      <h2 class="title">Miscellaneous</h2>
-      <br>
-      <br>
-      <div class="description">
-        <ul>
-          <li>
-            <p>
-              Cyberscape is the working title of my current gamedev project. It's an action roguelike inspired by Rogue Fable III and Nova Drift. I'm not at the point of 
-              having a playable demo, but you can view the in-progress source <a href="https://github.com/lee3650/ActionRoguelike" class="dark-link"><u>here</u></a>. 
-            </p>
-          </li>     
-          <li>
-            <p>
-              Twin Stick Privateer is a web game I released on newgrounds a few years ago. It's a twin-stick shooter based on Asteroids. 
-              You can play it on <a href="https://www.newgrounds.com/portal/view/697635" class="dark-link"><u>newgrounds</u></a> for free. 
-            </p>
-          </li> 
-          <li>
-            <p>
-              This website was developed in order to learn HTML/JavaScript. You can view the source code by clicking "View Source" in the navigation bar above. 
-            </p>
-          </li>
-        </ul>
-        
+            <li><a href="https://www.youtube.com/watch?v=pFqYs8AE4MQ" class="dark-link"><u>Wanderbots Playing Archipelago</u></a></li><br>       
+            <li><a href="https://store.steampowered.com/app/1811940/Archipelago" class="dark-link"><u>Steam Page</u></a></li><br>
+            <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
+          </ul>
         <button onclick="projectsClicked()" class="content-button">Back</button>
+        </div>
       </div>
-    </div>
-    <div id="Habidoro" class="content hidden">
-      <h2 class="title">Habidoro</h2>
-      <br>
-      <br>
-      <div class="description">
-        <p>
-          Habidoro is a productivity application that allows users to designate the total amount of time they want to work, splits that time into "pomodoros" and 
-          breaks of specified lengths, then tracks statistics and graphs of the users productive time. It was developed using Windows Presentation Foundation (WPF). 
-        </p>
-        <ul>
-          <li><a href="https://hopa.itch.io/habidoro" class="dark-link"><u>Itch.io Download</u></a></li><br>       
-        </ul>
-        <button onclick="projectsClicked()" class="content-button">Back</button>
-      </div>
-    </div>
-    <div id="Scheduler" class="content hidden">
-      <h2 class="title">Scheduler</h2>
-      <br>
-      <br>
-      <div class="description">
-        <p>
-          Scheduler is a productivity application that allows users to create personalized, reusable schedules. It was developed using Windows Presentation Foundation (WPF) and released on itch.io.
-          I made this way back in 2016, before I knew how to use git, so unfortunately the source code is not available. 
-        </p>
-        <ul>
-          <li><a href="https://hopa.itch.io/scheduler" class="dark-link"><u>Itch.io Download</u></a></li><br>       
-        </ul>
-        <button onclick="projectsClicked()" class="content-button">Back</button>
-      </div>
-    </div>
-    <div id="Archipelago" class="content hidden">
-      <h2 class="title">Archipelago</h2>
-      <br>
-      <div class="description">
-      <p>
-      Archipelago is a roguelite tower defense game I released in January 2022 on Steam. It was developed using Unity and C#. <br><br>It ended up being a fairly large project, especially for a solo developer.
-      I'm happy how I was able to maintain the speed of development throughout the whole project by writing decoupled, modular code. I was able to define all the "charms" - which are gameplay modifiers the 
-      player can find during the game - almost entirely within data, which allowed for rapid iteration. 
-      </p>
-      <ul>
-          <li><a href="https://www.youtube.com/watch?v=pFqYs8AE4MQ" class="dark-link"><u>Wanderbots Playing Archipelago</u></a></li><br>       
-          <li><a href="https://store.steampowered.com/app/1811940/Archipelago" class="dark-link"><u>Steam Page</u></a></li><br>
-          <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
-        </ul>
-      <button onclick="projectsClicked()" class="content-button">Back</button>
-      </div>
-    </div>
 	</body>
   <script src="scripts/main.js"></script>
 </html>

@@ -3,10 +3,14 @@ let bg = 0;
 let classes = ["code", "dark", "light"];
 const content = document.getElementById("about"); 
 const welcome = document.getElementById("welcome-text"); 
+const contentBg = document.getElementById("content-bg"); 
+const navBar = document.getElementById("nav-bar"); 
+navBar.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+
 
 function aboutClicked() { 
   hideAll(); 
-  makeVisible(content); 
+  makeContentVisible(content); 
 }
 
 function specificProject(sender) {
@@ -14,7 +18,7 @@ function specificProject(sender) {
   let search = sender.innerText.split(" "); 
   const e = document.getElementById(search[0]); 
   hideAll(); 
-  makeVisible(e); 
+  makeContentVisible(e); 
 }
 
 function makeHidden(item) {
@@ -25,6 +29,12 @@ function makeHidden(item) {
 function makeVisible(item) {
   item.classList.remove("hidden"); 
   item.classList.add("visible"); 
+}
+
+function makeContentVisible(item) {
+  contentBg.className = "bg-visible"; 
+  navBar.style.backgroundColor = "rgba(0, 0, 0, 1)";
+  makeVisible(item); 
 }
 
 function hideAll() {
@@ -39,11 +49,13 @@ function hideAll() {
 function projectsClicked() {
   const projects = document.getElementById("project-intro"); 
   hideAll();
-  makeVisible(projects); 
+  makeContentVisible(projects); 
 }
 
 function showWelcome() {
   hideAll();
+  contentBg.className = "hidden"; 
+  navBar.style.backgroundColor = "rgba(0, 0, 0, 0.8)"; 
   welcome.className = "welcome-shown"; 
 }
 
