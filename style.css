@@ -8,9 +8,17 @@ body {
 }
 
 a {
-  color: white; 
   text-decoration: none; 
   font-size: 1vw; 
+  color: white; 
+}
+
+.white-link {
+  color: white; 
+}
+
+.dark-link {
+  color: black;  
 }
 
 .light {
@@ -49,6 +57,18 @@ a {
   padding: 10px 0px 15px 0px;
   animation-name: slide-down; 
   animation-duration: 1s; 
+  display: fixed; 
+  top: 0;
+  left: 0;
+}
+
+button {
+  color: white; 
+  background-color: black; 
+  font-size: 1vw; 
+  font-family: 'Times New Roman', serif; 
+  border: black;
+  cursor: pointer; 
 }
 
 @keyframes slide-right {
@@ -67,38 +87,37 @@ a {
 @keyframes content-in {
   from {
     opacity: 0%; 
-    margin-left: 0%;
+    left: 0%;
   }
   to {
     opacity: 100%; 
-    margin-left: 5%; 
+    left: 5%; 
   }
 }
 
-#content {
-  margin-left: 5%; 
-  margin-top: 10%; 
+.content {
   position: absolute; 
-  top: 0;
-  left: 0; 
+  top: 20%;
+  left: 5%; 
+  width: 95%; 
 }
 
-#title {
+.title {
   font-size: 7vw; 
   background-color: black; 
   color: white; 
   display: inline-block;
-  width: 20%;  
-  margin: 0; 
+  margin: 0 5px 1% 5px; 
 }
 
-#description {
+.description {
   font-size: 1vw; 
   color: black; 
   background-color: white; 
   display: inline-block;
   width: 30%;
-  padding: 10px; 
+  padding: 0 10px; 
+  margin: 0; 
 }
 
 .visible {
@@ -151,11 +170,7 @@ h1 {
   color: white; 
 }
 
-button {
-  color: white; 
-  background-color: black; 
-  font-size: 1vw; 
-  font-family: 'Times New Roman', serif; 
-  border: black;
-  cursor: pointer; 
+.invert-color: {
+  background: white ! important;
+  color: black ! important; 
 }
