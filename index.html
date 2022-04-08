@@ -22,7 +22,7 @@
     <div id="about" class="content hidden">
       <h2 class="title">About</h2>
       <br>
-      <p class="description">Hey, welcome to my website. I'm Isaac Lee, a student at Purdue University, West Lafayette studying Computer Science. I plan to gradudate in December, 2023.<br><br>
+      <p class="description">Welcome to my website! I'm Isaac Lee, a student at Purdue University, West Lafayette studying Computer Science. I plan to gradudate in December, 2023.<br><br>
       I'm pursuing three tracks: Machine Intelligence, Security, and Computer Graphics, as well as minors in English and Math. <br><br>
       This website is hosted using GitHub Pages. You can press "Source" above to look at the source for this website, or click "GitHub" to be taken to my github. 
       Click the "Projects" tab for information on some of my completed projects.
@@ -33,11 +33,11 @@
     <div id="project-intro" class="content hidden">
       <h2 class="title">Projects</h2>
       <br>
-      <p class="description">
-      Here's a few of my completed (personal) programming projects. I started programming in 6th grade as part of FIRST Lego Robotics, and I released my first piece of software around 2016. <br><br> Click an option in the list to get more information about it. 
-      </p>
-      <br>
-      <div class="description">
+      <div class="description"
+        <p>
+        Here's a few of my completed (personal) programming projects. I started programming in 6th grade as part of FIRST Lego Robotics, and I released my first piece of software around 2016.
+        <br><br> Click an option in the list to get more information about it. 
+        </p>
         <ul>
           <li><button class="invert-color" onclick="specificProject(this)">Archipelago</button></li><br>
           <li><button class="invert-color" onclick="specificProject(this)">Habidoro</button></li><br>
@@ -49,39 +49,34 @@
     <div id="Habidoro" class="content hidden">
       <h2 class="title">Habidoro</h2>
       <br>
-      <p class="description">
-      Habidoro is a productivity application that allows users to designate the total amount of time they want to work, splits that time into "pomodoros" and breaks of specified lengths, then tracks statistics and graphs of the users productive time. 
-      </p>
       <br>
       <div class="description">
+        <p>
+          Habidoro is a productivity application that allows users to designate the total amount of time they want to work, splits that time into "pomodoros" and 
+          breaks of specified lengths, then tracks statistics and graphs of the users productive time. It was developed using Windows Presentation Foundation (WPF). 
+        </p>
         <ul>
-          <li><a href="https://www.youtube.com/watch?v=pFqYs8AE4MQ" class="dark-link"><u>Wanderbots Playing Archipelago</u></a></li><br>       
-          <li><a href="https://store.steampowered.com/app/1811940/Archipelago" class="dark-link"><u>Steam Page</u></a></li><br>
+          <li><a href="https://hopa.itch.io/habidoro" class="dark-link"><u>Itch.io Download</u></a></li><br>       
           <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
         </ul>
         <button onclick="projectsClicked()">Back</button>
-        <br>
-        <br>
       </div>
     </div>
         <div id="Archipelago" class="content hidden">
       <h2 class="title">Archipelago</h2>
       <br>
-      <p class="description">
+      <div class="description">
+      <p>
       Archipelago is a roguelite tower defense game I released in January 2022 on Steam. It was developed using Unity and C#. <br><br>It ended up being a fairly large project, especially for a solo developer.
       I'm happy how I was able to maintain the speed of development throughout the whole project by writing decoupled, modular code. I was able to define all the "charms" - which are gameplay modifiers the 
       player can find during the game - almost entirely within data, which allowed for rapid iteration. 
       </p>
-      <br>
-      <div class="description">
-        <ul>
+      <ul>
           <li><a href="https://www.youtube.com/watch?v=pFqYs8AE4MQ" class="dark-link"><u>Wanderbots Playing Archipelago</u></a></li><br>       
           <li><a href="https://store.steampowered.com/app/1811940/Archipelago" class="dark-link"><u>Steam Page</u></a></li><br>
           <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
         </ul>
-        <button onclick="projectsClicked()">Back</button>
-        <br>
-        <br>
+      <button onclick="projectsClicked()">Back</button>
       </div>
     </div>
 	</body>
