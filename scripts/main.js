@@ -11,7 +11,8 @@ function aboutClicked() {
 
 function specificProject(sender) {
   console.log("clicked button with text " + sender.innerText); 
-  const e = document.getElementById(sender.innerText); 
+  let search = sender.innerText.split(" "); 
+  const e = document.getElementById(search[0]); 
   hideAll(); 
   makeVisible(e); 
 }

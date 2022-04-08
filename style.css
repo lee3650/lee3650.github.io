@@ -69,6 +69,12 @@ button {
   font-family: 'Josefin Sans', serif; 
   border: black;
   cursor: pointer; 
+  border-radius: 5px; 
+}
+
+.content-button {
+  padding: 5px; 
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 
 @keyframes slide-right {

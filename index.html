@@ -39,11 +39,26 @@
         <br><br> Click an option in the list to get more information about it. 
         </p>
         <ul>
-          <li><button class="invert-color" onclick="specificProject(this)">Archipelago</button></li><br>
-          <li><button class="invert-color" onclick="specificProject(this)">Habidoro</button></li><br>
-          <li><button class="invert-color" onclick="specificProject(this)">Scheduler</button></li><br>
-          <li><button class="invert-color" onclick="specificProject(this)">This Website</button></li><br>
+          <li><button class="invert-color content-button" onclick="specificProject(this)">Archipelago</button></li><br>
+          <li><button class="invert-color content-button" onclick="specificProject(this)">Habidoro</button></li><br>
+          <li><button class="invert-color content-button" onclick="specificProject(this)">Scheduler</button></li><br>
+          <li><button class="invert-color content-button" onclick="specificProject(this)">Cyberscape</button></li><br>
         </ul>
+      </div>
+    </div>
+    <div id="Cyberscape" class="content hidden">
+      <h2 class="title">Cyberscape</h2>
+      <br>
+      <br>
+      <div class="description">
+        <p>
+          Cyberscape is the working title of my current project. It's an action roguelike inspired by Rogue Fable III and Nova Drift. I'm not at the point of 
+          having a playable demo, but you can view the in progress source below. 
+        </p>
+        <ul>
+          <li><a href="https://github.com/lee3650/ActionRoguelike" class="dark-link"><u>Source Code</u></a></li><br>       
+        </ul>
+        <button onclick="projectsClicked()" class="content-button">Back</button>
       </div>
     </div>
     <div id="Habidoro" class="content hidden">
@@ -57,12 +72,26 @@
         </p>
         <ul>
           <li><a href="https://hopa.itch.io/habidoro" class="dark-link"><u>Itch.io Download</u></a></li><br>       
-          <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
         </ul>
-        <button onclick="projectsClicked()">Back</button>
+        <button onclick="projectsClicked()" class="content-button">Back</button>
       </div>
     </div>
-        <div id="Archipelago" class="content hidden">
+    <div id="Scheduler" class="content hidden">
+      <h2 class="title">Scheduler</h2>
+      <br>
+      <br>
+      <div class="description">
+        <p>
+          Scheduler is a productivity application that allows users to create personalized, reusable schedules. It was developed using Windows Presentation Foundation (WPF) and released on itch.io.
+          I made this way back in 2016, before I knew how to use git, so unfortunately the source code is not available. 
+        </p>
+        <ul>
+          <li><a href="https://hopa.itch.io/scheduler" class="dark-link"><u>Itch.io Download</u></a></li><br>       
+        </ul>
+        <button onclick="projectsClicked()" class="content-button">Back</button>
+      </div>
+    </div>
+    <div id="Archipelago" class="content hidden">
       <h2 class="title">Archipelago</h2>
       <br>
       <div class="description">
@@ -76,7 +105,7 @@
           <li><a href="https://store.steampowered.com/app/1811940/Archipelago" class="dark-link"><u>Steam Page</u></a></li><br>
           <li><a href="https://github.com/lee3650/SummonerGame" class="dark-link"><u>Source code</u></a></li><br>
         </ul>
-      <button onclick="projectsClicked()">Back</button>
+      <button onclick="projectsClicked()" class="content-button">Back</button>
       </div>
     </div>
 	</body>
