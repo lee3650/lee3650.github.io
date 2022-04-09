@@ -6,7 +6,8 @@ const welcome = document.getElementById("welcome-text");
 const contentBg = document.getElementById("content-bg"); 
 const navBar = document.getElementById("nav-bar"); 
 navBar.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-
+bg = Math.floor(Math.random() * classes.length); 
+toggleMode(); 
 
 function aboutClicked() { 
   hideAll(); 
@@ -60,7 +61,6 @@ function showWelcome() {
 }
 
 function toggleMode() {
-  const toggle = document.getElementById("toggle"); 
   bg = (bg + 1) % classes.length; 
   body.className = classes[bg];
 }

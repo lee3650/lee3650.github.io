@@ -112,7 +112,8 @@ button {
   height: 100%; 
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
-  z-index: inherit; 
+  cursor: pointer; 
+  z-index: 2;
 }
 
 .content {
@@ -206,6 +207,7 @@ h1 {
   display: fixed; 
   top: 0;
   left: 0;
+  z-index: 3; 
 }
 
 #vertical-line {
