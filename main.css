@@ -1,0 +1,85 @@
+:root {
+    --dark-background: #151515; 
+    --in-between-color: #303030; 
+    --light-background: #202020; 
+    --blue-highlight: #659af0; 
+    --orange-highlight: #f09165; 
+    --content-padding: 1vw; 
+}
+
+h1,h2,h3,h4,h5 {
+    color: var(--blue-highlight); 
+}
+
+html {
+    background-color: var(--dark-background);
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    margin: 0; 
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(5px, 1.2fr) 4fr minmax(5px, 1.2fr); 
+    grid-template-rows: minmax(3vh, 25px) minmax(95vh, auto) minmax(3vh, 25px); 
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content {
+    background-color: var(--light-background);
+    grid-row: 3 / span 1; 
+    grid-column: 2 / span 1;
+    padding-left: var(--content-padding);
+}
+
+.main-content {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    background-color: var(--light-background);
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+}
+
+.header-content {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    background-color: var(--dark-background);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--in-between-color);
+}
+
+.selected-tab {
+    border-top-color: var(--blue-highlight);
+    background-color: var(--light-background);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.inline-code {
+    color: var(--orange-highlight);
+    font-family: monospace;
+}
+
+a:hover {
+    color: var(--blue-highlight); 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
