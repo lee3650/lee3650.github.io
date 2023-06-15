@@ -4,6 +4,7 @@
     --light-background: #202020; 
     --blue-highlight: #659af0; 
     --orange-highlight: #f09165; 
+    --green-highlight: #aff065; 
     --content-padding: 1vw; 
 }
 
@@ -21,7 +22,7 @@ html {
 
 .container {
     display: grid;
-    grid-template-columns: minmax(5px, 1.2fr) 4fr minmax(5px, 1.2fr); 
+    grid-template-columns: minmax(5px, 1.5fr) 4fr minmax(5px, 1.5fr); 
     grid-template-rows: minmax(3vh, 25px) minmax(95vh, auto) minmax(3vh, 25px); 
     margin: 0;
     padding: 0;
@@ -62,6 +63,7 @@ html {
 .selected-tab {
     border-top-color: var(--blue-highlight);
     background-color: var(--light-background);
+    font-weight: 700;
 }
 
 .header-container {
@@ -82,4 +84,13 @@ a:hover {
 a {
     text-decoration: none;
     color: white;
+}
+
+.normal-link {
+    color: var(--orange-highlight); 
+    text-decoration: underline;
+}
+
+em {
+    color: var(--green-highlight); 
 }
