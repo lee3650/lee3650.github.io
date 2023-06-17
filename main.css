@@ -9,6 +9,7 @@
     --content-padding: 1vw; 
     --toolbar-height: 2.5vh;
     --light-green-highlight: #d8f56e; 
+    --outer-row-width: minmax(3vh, 25px); 
 }
 
 h1 {
@@ -34,7 +35,7 @@ html {
 .container {
     display: grid;
     grid-template-columns: minmax(5px, 1.5fr) 4fr minmax(5px, 1.5fr); 
-    grid-template-rows: minmax(3vh, 25px) var(--toolbar-height) minmax(95vh, auto) minmax(3vh, 25px); 
+    grid-template-rows: var(--outer-row-width) var(--toolbar-height) minmax(95vh, auto) var(--outer-row-width); 
     margin: 0;
     padding: 0;
 }
