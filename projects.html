@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        const cur_page = 'projects-tab'
+        $(document).ready(() => {
+            console.log('loaded'); 
+            $("#header_content").load("https://lee3650.github.io/header.html", () => {
+                $(`#${cur_page}`).addClass('selected-tab') 
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-content" id="header_content">
+        </div>
+        <div class="breadcrumb">
+            📁 src > 📁 web > # projects.html
+        </div>
+        <div class="main-content">
+            <h1>
+                # Projects
+            </h1>
+            On this page you can read more about my projects in depth. 
+            <h2>
+                ## Arcane Assembly
+            </h2>
+            <p>
+            <a href="https://store.steampowered.com/app/2356150/Arcane_Assembly/" class="normal-link">Arcane Assembly</a> is an upcoming spell-programming metroidvania. 
+            </p>
+            <p>
+                :wqa
+            </p>
+        </div>
+    </div>
+</body>
+</html>

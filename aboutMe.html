@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        const cur_page = 'aboutMe-tab'
+        $(document).ready(() => {
+            console.log('loaded'); 
+            $("#header_content").load("https://lee3650.github.io/header.html", () => {
+                $(`#${cur_page}`).addClass('selected-tab') 
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-content" id="header_content">
+        </div>
+        <div class="breadcrumb">
+            📁 src > 📁 web > # aboutMe.html
+        </div>
+        <div class="main-content">
+            <h1>
+            # About Me
+            </h1>
+            <p>
+            Nice to meet you! My name is Isaac Lee. I'm a senior at Purdue University where I'm pursuing a Bachelor's degree in Computer Science with minors in English and Math. I'm pursuing three tracks: Security, Computer Graphics, and Algorithmic Foundations. 
+            </p>
+            <p>
+            I'm currently the president of Purdue IGDC (Indie Gamedev Club). 
+            </p>
+            <h2>
+                Things I like 
+            </h2>
+            <p>
+            I use <a href="https://obsidian.md" class="normal-link">Obsidian</a> as a markdown editor. As you can probably tell from this website, I like markdown. 
+            </p>
+            <p>
+            I use <a href="https://www.vim.org" class="normal-link">Vim</a> for all my non-code text editing. However, for coding I use VS Code and Visual Studio with Vim extensions. 
+            </p>
+        </div>
+    </div>
+</body>
+</html>

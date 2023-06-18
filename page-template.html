@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        const cur_page = 'CURRENT_PAGE'
+        $(document).ready(() => {
+            console.log('loaded'); 
+            $("#header_content").load("https://lee3650.github.io/header.html", () => {
+                $(`#${cur_page}`).addClass('selected-tab') 
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-content" id="header_content">
+        </div>
+        <div class="breadcrumb">
+            📁 src > 📁 web > # CURRENT_PAGE
+        </div>
+        <div class="main-content">
+            <p>
+                :wqa
+            </p>
+        </div>
+    </div>
+</body>
+</html>
