@@ -7,9 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <script>
+        const cur_page = 'home-page'
         $(document).ready(() => {
             console.log('loaded'); 
-            $("#header_content").load("https://lee3650.github.io/header.html")
+            $("#header_content").load("https://lee3650.github.io/header.html", () => {
+                $(`#${cur_page}`).addClass('selected-tab') 
+            })
         })
     </script>
 </head>
@@ -126,9 +129,9 @@
             <p>
                 If you're interested, you can read more about some of my <a href="" class="normal-link">projects</a>, read a little more <a href="/aboutMe" class="normal-link">about me</a>, or visit my <a href="https://github.com/lee3650" class="normal-link">github</a>. 
             </p>
-        </div>
-        <div class="footer-content">
-        :wqa
+            <p>
+                :wqa
+            </p>
         </div>
     </div>
 
