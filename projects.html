@@ -37,8 +37,87 @@
                 ## Arcane Assembly
             </h2>
             <p>
-            <a href="https://store.steampowered.com/app/2356150/Arcane_Assembly/" class="normal-link">Arcane Assembly</a> is an upcoming spell-programming metroidvania. 
+            <a href="https://store.steampowered.com/app/2356150/Arcane_Assembly/" class="normal-link">Arcane Assembly</a> is an upcoming spell-programming metroidvania.
             </p>
+            <p>
+                I'd say the #1 lesson I've learned from this game is automate everything, especially if you're a solo developer with limited free time. 
+                <br>
+                <br>
+            Whether or not the game is a success, I'm proud of the progress I made in this game in terms of developer experience and tooling as compared to my last projects. 
+            <br>
+            <br>
+            Here's a few things I did: 
+            </p>
+            <h3>
+            ### Level editor
+            </h3>
+            I wrote unity editor scripts to transform .png files edited using <a href="https://www.aseprite.org/" class='normal-link'>aseprite</a> into levels/rooms for the game. Each pixel represents one tile, and the color represents the tile type. Here's an example: 
+            <div class="containImage">
+                <img src="BranchVis-export.png" alt="Pixel art level"/>
+            </div>
+            Then in Unity, I select the image, press <span class="inline-code">`ctrl-shift-d`</span>, and a new scene is created, the contents of the image are parsed and transformed into the given level. 
+            Here's what the above scene looks like in game: 
+            <div class="containImage">
+                <img src="parsed_img_ingame.png" alt="Pixel art level" width="50%"/>
+            </div>
+            The light blue pixel in the level definition corresponds to the wooden bench on the right. 
+            <p>
+                This has saved me <em>*tons*</em> of time overall, and easily has repaid the amount of time I spent writing it. Building levels is a good candidate for automation since I do it so frequently - there's something like 200 rooms in the game.
+            </p>
+            <h3>
+                ### Build and test tools 
+            </h3>
+            I got <em>*very*</em> tired of manual testing when I was working on <a href="https://store.steampowered.com/app/1811940/Archipelago/">Archipelago</a>, so for this project I wrote an automated test system.<br> <br>In general, 
+            games are difficult to test automatically. For Arcane Assembly, I'm using a system of recorded input. You can start recording by typing 
+            <span class="inline-code">`recordtest {testname}`</span> in the console, then all input will be recorded until you press <span class='inline-code'>~</span>. <br><br>The input is saved to a file, so you can play it back programatically and write tests for expected end state.
+            <br><br>
+            There's definitely disadvantages to this system - floating point non-determinism means that recorded input will not be played back exactly, especially for long tests, and any tests involving the mouse break if UI elements move. 
+            However, it's still better than 100% manual testing, and of course I have some unit tests for more 'functional' parts of the game. 
+            <h3>
+                ### Misc
+            </h3>
+            A few more things of note: 
+            <ul>
+                <li>Arcane Assembly the language: a Turing complete programming language that you can edit using a visual drag and drop UI. Basic PL development was, like simple shader code and netcode, honestly <em>*way*</em> easier than I expected. 
+                    The implementation in the game is pretty badly done, but I recently discovered Robert Nystrom's <a href="https://craftinginterpreters.com" class="normal-link">Crafting Interpreters</a>, so 
+                I think I could do better in the future. Someday I'd like to make a "real" programming language. <ul><li>Well, technically the <em>*implementation*</em> is Turing complete, but the set of instructions exposed to the player is not for balance reasons.</li><li>Of course, making a Turing complete language is not that impressive, considering you only need to implement <a href="https://en.wikipedia.org/wiki/One-instruction_set_computer" class="normal-link">one instruction</a>.</li></ul></li>
+                <li>Developer console: has support for <span class="inline-code">`src {filename}`</span> commands, so I can write long, reusable scripts.</li>
+                <li>Build/deployment tools: I have a simple build script which builds the game, copies it to a specific directory, and moves a bunch of text configuration/data files into specific places in that directory. Then I also wrote a simple wrapper script for the Steam CLI to make deployment a little easier.</li>
+            </ul>
+            <h2>
+                ## Time Tracker
+            </h2>
+            <a href="https://declarativetime.com" class="normal-link">This project</a> is just a JS visualizer for text files that contain time tracking data in a certain format. 
+            I cranked this project out in 11 days while on vacation. Overall it was fairly straightforward, though JS for large projects gets old very quickly. If I were doing this again, I'd use TypeScript. 
+            <br>
+            <br>
+            There was significantly less interest in this when I was than I expected, which I suppose proves the old adage that developers don't understand what users want. 
+            <h2>
+                ## Other projects
+            </h2>
+            <h3>
+                ### Archipelago
+            </h3>
+            I released Archipelago on Steam in January 2022. I was fortunate enough to have <a href="https://www.youtube.com/watch?v=pFqYs8AE4MQ" class="normal-link">Wanderbots</a> 
+            play it on stream, which drove a decent number of sales. Last time I checked it was at 1824 copies sold, most of which were at a discount.
+            <br>
+            <br>
+            I definitely <em>*learned*</em> a lot from the project, mostly of what <em>*not*</em> to do - i.e., 
+            don't rely on manual testing, don't ship builds that were built with a Unity version that's like, 4 years out of date, don't go like, 6 months into a project 
+            with no clear plan or vision of what it should look like, etc. 
+            <h3>
+                ### This website
+            </h3>
+            This is barely a project, but this website is made with plain HTML, CSS, and a little JQuery for putting the header on each page. 
+            <h3>
+                ### Older
+            </h3>
+            A few years ago I made some productivity software: <a href="https://hopa.itch.io/scheduler" class="normal-link">Scheduler</a>,
+             a way to make personal, daily schedules, and <a href="https://hopa.itch.io/habidoro" class="normal-link">Habidoro</a>, a time tracking / habit tracker app based on the pomodoro technique.
+              I've definitely learned a lot since these projects, and I plan to remake at least Scheduler at some point in the future. 
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 </body>

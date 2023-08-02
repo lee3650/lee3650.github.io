@@ -12,6 +12,14 @@
     --outer-row-width: minmax(3vh, 25px); 
 }
 
+.containImage {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 h1 {
     color: var(--light-green-highlight); 
 }
@@ -95,6 +103,10 @@ html {
     display: flex;
     align-items: center;
     height: 100%;
+}
+
+ul li {
+    padding: 3px 0px; 
 }
 
 .inline-code {
